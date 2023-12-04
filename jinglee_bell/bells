@@ -1,0 +1,39 @@
+def print_decorated_colored_line(line, color_code):
+    decorated_line = "*" * 40
+    decorated_line += "\n\033[{}m{}\033[0m".format(color_code, line.center(40))
+    decorated_line += "\n" + "*" * 40
+    print(decorated_line)
+
+def jingle_bells():
+    print_decorated_colored_line("Jingle bells, code spells", 91)  # Red text
+    print_decorated_colored_line("Coding all the way", 92)         # Green text
+    print_decorated_colored_line("Oh, what fun it is to debug", 93) # Yellow text
+    print_decorated_colored_line("In a one-line open sleigh, hey!", 94) # Blue text
+
+def dashing_through_the_code():
+    print_decorated_colored_line("Dashing through the code", 91)
+    print_decorated_colored_line("In a one-line open sleigh", 92)
+    print_decorated_colored_line("O'er the bugs we go", 93)
+    print_decorated_colored_line("Laughing all the way, hey!", 94)
+
+def oh_what_fun():
+    print_decorated_colored_line("Oh, what fun it is to code", 91)
+    print_decorated_colored_line("In a one-line open sleigh, hey!", 92)
+
+def chorus_repeat():
+    print_decorated_colored_line("Jingle bells, code spells", 91)
+    print_decorated_colored_line("Coding all the way", 92)
+    print_decorated_colored_line("Oh, what fun it is to debug", 93)
+    print_decorated_colored_line("In a one-line open sleigh, hey!", 94)
+
+def entire_song():
+    jingle_bells()
+    print()
+    dashing_through_the_code()
+    print()
+    oh_what_fun()
+    print()
+    chorus_repeat()
+
+entire_song()
+
